@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,50 +10,55 @@
 </head>
 
 <body>
+    <!-- header start -->
     <header>
         <div class="header-container">
             <nav class="header-container-container">
                 <img src="https://cdn6.agoda.net/images/MVC/default/agoda-logo.svg" alt="Agoda logo" class="logo">
-                <ul class="LinkContainer">
-                    <li class="LinkContainer__LinkWrapper">
-                        <a href="#" class="LinkContainer__Link">
-                            <span class="LinkContainer__Link__text">Accommodations</span>
+                <ul class="lnkcontainer">
+                    <li class="lnkcontainer__LinkWrapper">
+                        <a href="/" class="lnkcontainer__Link">
+                            <span class="lnkcontainer__Link__text">Accommodations</span>
                         </a>
                     </li>
 
-                    <li class="LinkContainer__LinkWrapper">
-                        <a href="#" class="LinkContainer__Link">
-                            <span class="LinkContainer__Link__text">Flights</span>
+                    <li class="lnkcontainer__LinkWrapper">
+                        <a href="/" class="lnkcontainer__Link">
+                            <span class="lnkcontainer__Link__text">Flights</span>
                         </a>
                     </li>
 
-                    <li class="LinkContainer__LinkWrapper">
-                        <a href="#" class="LinkContainer__Link">
-                            <span class="LinkContainer__Link__text">Airport transfer</span>
+                    <li class="lnkcontainer__LinkWrapper">
+                        <a href="/" class="lnkcontainer__Link">
+                            <span class="lnkcontainer__Link__text">Airport transfer</span>
                         </a>
                     </li>
 
-                    <li class="LinkContainer__LinkWrapper">
-                        <a href="#" class="LinkContainer__Link">
-                            <span class="LinkContainer__Link__text">Today’s deals</span>
+                    <li class="lnkcontainer__LinkWrapper">
+                        <a href="/" class="lnkcontainer__Link">
+                            <span class="lnkcontainer__Link__text">Today’s deals</span>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- header end -->
 
+
+
+    <!-- Search section start -->
     <section>
-        <div class="sectionContainer">
-            <div class="sectionContainer__TileContainer">
-                <div class="TileWrapper">
-                    <div class="WelcomeMessage">
+        <div class="secontainer">
+            <div class="secontainer__Tilecontainer">
+                <div class="titlewrpr">
+                    <div class="wlcmsg">
                         <div>
                             <h1>HOTELS, HOMES, HOSTELS AND MORE</h1>
                             <h2>Get the best prices on 2,000,000+ properties, worldwide</h2>
                         </div>
                     </div>
-                    <div class="ulTabContainer">
+                    <div class="ulTabcontainer">
                         <ul class="ulTab ad">
                             <li>
                                 <span>All Rooms</span>
@@ -63,13 +67,13 @@
                                 <span>Agoda Homes</span>
                             </li>
                         </ul>
-                        <div class="searchBox">
-                            <div contenteditable="true"></div>
-                            <div contenteditable="true"></div>
-                            <div>
-                                <div contenteditable="true"></div>
+                        <div class="srchbox">
+                            <input type="text" placeholder="Enter a destination">
+                            <input type="text" placeholder="Enter the date">
+                            <!-- <div> -->
+                                <input type="text" placeholder="No of adults" class="">
                                 <button>SEARCH</button>
-                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
 
@@ -77,30 +81,30 @@
                         class="image">
                 </div>
             </div>
-            <div class="sectionContainer__TileContainer">
-                <div class="TileWrapper wrapperAd">
+            <div class="secontainer__Tilecontainer">
+                <div class="titlewrpr wrapperAd">
                     <ul class="ulTab explore">
                         <li><span>What's new</span></li>
                         <li><span>Explore</span></li>
                     </ul>
                     <div class="advertising">
-                        <div class="b1">
+                        <div class="box1">
                             <h1>SAVE AN EXTRA</h1>
                             <p class="discount">10%</p>
                             <p class="destination">on selected destination</p>
                             <p class="best">our best prices are even lower updated everyday !</p>
-                            <button class="dealButton">VIEW TODAY`S DEALS</button>
+                            <button class="dealbtn">VIEW TODAY`S DEALS</button>
                         </div>
-                        <div class="b2">
+                        <div class="box2">
                             <img src="https://cdn6.agoda.net/images/MVC/default/background_image/NHA_480x160px.jpg"
                                 class="imgAd">
                             <div>
                                 <p class="becomehost">BECOME A HOST</p>
-                                <p class="hostDetail">List your place on Agoda Homes. Pay no commissions or fees, ever.</p>
+                                <p class="hostdtl">List your place on Agoda Homes. Pay no commissions or fees, ever.</p>
                                 <button class="listButton">LIST YOUR PLACE TODAY</button>
                             </div>
                         </div>
-                        <div class="b3">
+                        <div class="box3">
                             <p>Groups loves agoda homes</p>
                             <div class="margin">
                                 <h2>YOU DECIDE</h2>
@@ -116,6 +120,10 @@
             </div>
         </div>
     </section>
+
+    <!-- end serach section  -->
+
+    <!-- deals section start -->
     <section class="overhead">
         <div class="overhead__wrapper">
             <h2 class="overhead--title">Overheard from travelers</h2>
@@ -145,6 +153,12 @@
         </div>
 
     </section>
+
+
+    <!-- deals section end -->
+
+
+    <!-- Popular travelers start-->
 
     <section class="popularDestinations">
         <div class="popularDestinations--heading">
@@ -195,6 +209,11 @@
         </div>
     </section>
 
+    <!-- Popular travelers end -->
+
+
+    <!-- help section start -->
+
     <section class="help">
         <div class="help-container">
             <div class="help-heading">
@@ -229,6 +248,9 @@
             </div>
         </div>
     </section>
+
+
+    <!-- help section end -->
 
 
     <footer>

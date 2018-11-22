@@ -28,7 +28,7 @@ header {
     margin-top: 1%;
 }
 
-.LinkContainer::before {
+.lnkcontainer::before {
     content: " ";
     border-right: 1px solid #eee;
     position: absolute;
@@ -38,19 +38,19 @@ header {
     margin-left: -2%;
 }
 
-.LinkContainer {
+.lnkcontainer {
     display: inline-block;
     position: relative;
     margin-bottom: 0;
     margin-left: 30px;
 }
 
-.LinkContainer__LinkWrapper {
+.lnkcontainer__LinkWrapper {
     display: inline-block;
     cursor: pointer;
 }
 
-.LinkContainer__Link {
+.lnkcontainer__Link {
     display: inline-block;
     padding: 0 10px;
     font-weight: 700;
@@ -58,21 +58,21 @@ header {
     min-width: 44px;
 }
 
-.LinkContainer__Link:focus,
-.LinkContainer__Link:link,
-.LinkContainer__Link:visited {
+.lnkcontainer__Link:focus,
+.lnkcontainer__Link:link,
+.lnkcontainer__Link:visited {
     color: rgba(0, 0, 0, .75);
     text-decoration: none;
 }
 
-.sectionContainer {
+.secontainer {
     display: flex;
     flex-direction: row;
     padding: 0 2%;
     background-image: linear-gradient(#f68a73, #ffdf8f);
 }
 
-.sectionContainer__TileContainer {
+.secontainer__Tilecontainer {
     width: 50%;
 }
 
@@ -82,22 +82,22 @@ header {
     margin-top: 19%;
 }
 
-.TileWrapper {
+.titlewrpr {
     margin: 8% 0 0 5%;
 }
 
-.WelcomeMessage {
+.wlcmsg {
     color: #fff;
 }
 
-.WelcomeMessage h1 {
+.wlcmsg h1 {
     font-size: 1.5em;
     line-height: 1.3;
     font-weight: 400;
     margin-top: 0;
 }
 
-.WelcomeMessage h2 {
+.wlcmsg h2 {
     font-size: 1.2em;
     line-height: 1.3;
     margin-top: 2%;
@@ -116,7 +116,7 @@ header {
     justify-content: space-evenly;
 }
 
-.ulTabContainer {
+.ulTabcontainer {
     margin-top: 8%;
 }
 
@@ -126,35 +126,31 @@ header {
     cursor: pointer;
 }
 
-.searchBox {
+.srchbox {
     display: flex;
     flex-direction: column;
     padding-top: 2%;
 }
 
-.searchBox>div:nth-of-type(1),
-.searchBox>div:nth-of-type(2) {
+
+.srchbox input{
     height: 80px;
     width: 90%;
     background-color: #fff;
+    padding: 1% 0 0 6%;
     margin: 1%;
     box-shadow: 0 2px 2px #aaaaaa;
+    color: #9E9E9E;
 }
 
-.searchBox>div:nth-of-type(3) {
-    width: 92%;
+
+.srchbox>input:nth-of-type(3) {
+    width: 90%;
     display: flex;
 }
 
-.searchBox>div>div {
-    height: 80px;
-    width: 70%;
-    background-color: #fff;
-    margin: 1%;
-    box-shadow: 0 2px 2px #aaaaaa;
-}
 
-.searchBox>div>button {
+.srchbox>button {
     height: 80px;
     width: 30%;
     background-color: #488bf8;
@@ -195,19 +191,19 @@ header {
 }
 
 
-.b1 {
+.box1 {
     text-align: center;
     box-sizing: border-box;
 }
 
-.b1 h1 {
+.box1 h1 {
     color: white;
     font-size: 25px;
     font-weight: 200;
     padding-top: 10%;
 }
 
-.b1 .discount {
+.box1 .discount {
     font-size: 62px;
     margin: 0;
     color: white;
@@ -215,7 +211,7 @@ header {
     font-family: sans-serif;
 }
 
-.b1 .destination {
+.box1 .destination {
     margin: 0;
     font-size: 20px;
     color: white;
@@ -223,7 +219,7 @@ header {
     font-weight: 200;
 }
 
-.b1 .best {
+.box1 .best {
     font-size: 19px;
     color: #195d80;
     padding: 15px;
@@ -231,7 +227,7 @@ header {
     line-height: 24px;
 }
 
-.dealButton {
+.dealbtn {
     text-align: center;
     border-radius: 3px;
     border-style: solid;
@@ -251,7 +247,7 @@ header {
     width: 25%;
 }
 
-.b2 div {
+.box2 div {
     padding: 7% 16% 16% 16%;
 }
 
@@ -268,7 +264,7 @@ header {
     color: #0a4867;
 }
 
-.hostDetail {
+.hostdtl {
     color: #0a4867;
     font-size: 14px;
     line-height: 22px;
@@ -297,19 +293,19 @@ header {
     margin-top: 15px;
 }
 
-.b3 {
+.box3 {
     background-image: url(https://cdn6.agoda.net/images/MVC/default/background_image/tiles/NHA-group-min-960x470-min.jpg);
     background-position: center;
     color: white;
     padding: 60px;
 }
 
-.b3 p {
+.box3 p {
     font-size: 15px;
     margin: 0;
 }
 
-.b3 h2 {
+.box3 h2 {
     font-size: 18px;
     font-weight: 400;
     margin: 0;
@@ -383,6 +379,7 @@ header {
     font-size: 25px;
     line-height: 40px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .destination--img {
