@@ -1,0 +1,95 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font: 100% Georgia, "Times New Roman", Times, serif;
+    background-color: rgb(214, 250, 247);
+}
+
+.logo {
+    margin-left: 10px;
+    width: 80.55%;
+}
+.logo img{
+    height: 50px;
+    margin-top: 5px;
+}
+
+header {
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+header ul {
+    display: inline;
+}
+
+header ul li {
+    width: 8%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10%;
+}
+
+.container {
+    width: 80.55%;
+    margin: 0 auto;
+}
+.container p {
+    text-align: justify;
+}
+
+main {
+    width: 70%;
+    margin-right: 2%;
+    float: left;
+}
+
+main img {
+    width: 200px;
+    float: left;
+    margin-right: 5px;
+}
+
+aside {
+    width: 28%;
+    float: left;
+
+    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.6); */
+    box-shadow: 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+
+aside ul {
+    padding: 0;
+}
+
+aside li {
+    width: 49%;
+    float: left;
+}
+
+aside li:nth-child(odd) {
+    margin-right: 1%;
+}
+
+aside img {
+    width: 100%;
+}
+@media(max-width:450px){
+    aside li {
+        width: 100%;
+    }
+    main {
+      width: 100%;
+    }
+
+    aside {
+    width: 100%;
+       }
+}
