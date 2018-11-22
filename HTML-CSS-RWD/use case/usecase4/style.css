@@ -1,0 +1,37 @@
+html,
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+input {
+    padding: 12px 80px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.calulator-section {
+    margin-top: 20px;
+    margin-left: 20%;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section div {
+    width: 80px;
+    padding: 10px;
+    font-weight: bold;
+}

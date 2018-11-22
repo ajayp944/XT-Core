@@ -1,0 +1,53 @@
+.container {
+    width: 900px;
+    height: 600px;
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid rgb(43, 41, 41);
+}
+
+.box1 {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    width: 200px;
+    height: 100px;
+    border: 5px solid rgb(75, 116, 75);
+}
+
+.box2 {
+    position: absolute;
+    left: 20%;
+    bottom: 31%;
+    width: 200px;
+    height: 100px;
+    border: 5px solid rgb(75, 116, 75);
+}
+
+
+.box3 {
+    position: absolute;
+    right: 20%;
+    top: 25%;
+    width: 200px;
+    height: 100px;
+    border: 5px solid rgb(75, 116, 75);
+}
+
+.box4 {
+    position: absolute;
+    right: 20%;
+    bottom: 31%;
+    width: 200px;
+    height: 100px;
+    border: 5px solid rgb(75, 116, 75);
+}
+
+.box5 {
+    position: absolute;
+    right: 39%;
+    bottom: 44%;
+    width: 200px;
+    height: 100px;
+    border: 5px solid rgb(255, 165, 165);
+}
