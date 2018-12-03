@@ -17,3 +17,6 @@ Create a console based calculator using functions and operators.
 
 # 5. UC5-> Fetch
    - for the provided GitHib URLs, collect user informations in one call.
+
+# 5. UC6-> Async Await 
+   - Async Await example by using Mock server Api.
