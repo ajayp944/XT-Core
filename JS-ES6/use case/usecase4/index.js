@@ -44,3 +44,18 @@ function slowGet(x) {
 let getX = fast(slowGetX); 
 
 */
+
+
+
+let urls = [
+  'https://api.github.com/users/iliakan',
+  'https://api.github.com/users/remy',
+  'https://api.github.com/users/jeresig',
+];
+
+
+Promise.all(urls.map(url =>
+  fetch(url).then(resp => resp.text())
+)).then(texts => {
+  console.log(texts);
+})

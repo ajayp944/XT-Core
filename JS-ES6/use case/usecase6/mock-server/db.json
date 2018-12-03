@@ -1,0 +1,33 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "First Post",
+        "author": "Ajay Pratap Singh"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "First comment",
+        "postId": 1
+      }
+    ],
+    "profile": [
+      {
+        "id": 2,
+        "name": "Ajay",
+        "city": "Delhi"
+      },
+      {
+        "id": 3,
+        "name": "Sid",
+        "city": "Delhi"
+      },
+      {
+        "id": 5,
+        "name": "Anku",
+        "city": "Delhi"
+      }
+    ]
+  }
