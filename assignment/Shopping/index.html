@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -16,140 +14,23 @@
         </header>
         <section>
             <div class="box title desktop-view">
-                <div class="col-9">
-                    3 Items
+                <div class="col-9" id='total_itms' role="heading" aria-level="7">
+                    &nbsp;
                 </div>
-                <div class="col-1">
+                <div class="col-1" role="heading" aria-level="7">
                     <p>Size</p>
                 </div>
-                <div class="col-1">
+                <div class="col-1" role="heading" aria-level="7">
                     <p>Qty</p>
                 </div>
-                <div class="col-1">
+                <div class="col-1" role="heading" aria-level="7">
                     <p>Price</p>
                 </div>
             </div>
-            <div class="mobile-view item-count">
+            <div class="mobile-view item-count total_itms" role="heading" aria-level="7">
                 <p> 3 Items</p>
             </div>
             <div id="product-list"></div>
-            <div class="box">
-                <div class="col-3 col-sm-6">
-                    <img src="assets/images/black.jpg" class="img" alt="Black tshirt">
-                </div>
-                <div class="col-6">
-                    <h5>Solid Black Cotton Shirt</h5>
-                    <p>Style #: MS13KT1906</p>
-                    <p role="contentinfo">Color: Black</p>
-                </div>
-                <div class="desktop-view">
-                    <div class="col-1">
-                        <p>S</p>
-                    </div>
-                    <div class="col-1">
-                        <input type="text" name="qty" value="1">
-                    </div>
-                    <div class="col-1">
-                        <p>$11.00</p>
-                    </div>
-                </div>
-                <div class="mobile-view">
-                    <div class="col-sm-12">
-                        <p>Size: S</p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p>QTY: <input type="text" name="qty" value="1"></p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p><strong>$11.00</strong></p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-12 action-section">
-                    <div onclick="openModal(2);" tabindex="0" role="button" aria-pressed="false">Edit</div>
-                    <div tabindex="0" role="button" aria-pressed="false">
-                        <span aria-hidden=true>&times;</span> Remove
-                    </div>
-                    <div tabindex="0" role="button" aria-pressed="false">Save For Later</div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="col-3 col-sm-6">
-                    <img src="assets/images/white.jpg" class="img" alt="Black tshirt">
-                </div>
-                <div class="col-6">
-                    <h5>Solid white Cotton Shirt</h5>
-                    <p>Style #: MS13KT1906</p>
-                    <p>Color: Pink</p>
-                </div>
-                <div class="desktop-view">
-                    <div class="col-1">
-                        <p>S</p>
-                    </div>
-                    <div class="col-1">
-                        <p><input type="text" name="qty" value="1"></p>
-                    </div>
-                    <div class="col-1">
-                        <p>$11.00</p>
-                    </div>
-                </div>
-                <div class="mobile-view">
-                    <div class="col-sm-12">
-                        <p>Size: S</p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p>QTY: <input type="text" name="qty" value="1"></p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p><strong>$11.00</strong></p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-12 action-section">
-                    <div onclick="openModal(2);">Edit</div>
-                    <div>
-                        <span>&times;</span> Remove
-                    </div>
-                    <div>Save For Later</div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="col-3 col-sm-6">
-                    <img src="assets/images/pink.jpg" class="img" alt="pink tshirt">
-                </div>
-                <div class="col-6">
-                    <h5>Solid Pink Cotton Shirt</h5>
-                    <p>Style #: MS13KT1906</p>
-                    <p>Color: Pink</p>
-                </div>
-                <div class="desktop-view">
-                    <div class="col-1">
-                        <p>S</p>
-                    </div>
-                    <div class="col-1">
-                        <p><input type="text" name="qty" value="1"></p>
-                    </div>
-                    <div class="col-1">
-                        <p>$11.00</p>
-                    </div>
-                </div>
-                <div class="mobile-view">
-                    <div class="col-sm-12">
-                        <p>Size: S</p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p>QTY: <input type="text" name="qty" value="1"></p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p><strong>$11.00</strong></p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-12 action-section">
-                    <div onclick="openModal(2);">Edit</div>
-                    <div>
-                        <span>&times;</span> Remove
-                    </div>
-                    <div>Save For Later</div>
-                </div>
-            </div>
         </section>
     </div>
     <div id="myModal" class="modal">
@@ -164,7 +45,6 @@
                             Color <br>
                             <span class="square__black"></span>
                             <span class="square__blue"></span>
-
                         </li>
                         <li>
                             <select>
@@ -195,18 +75,6 @@
             <div class="clearfix"></div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/carousel.js"></script>
-
+    <script src="assets/js/main-new.js"></script>
 </body>
-
 </html>

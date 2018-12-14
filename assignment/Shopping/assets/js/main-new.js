@@ -1,38 +1,52 @@
-
-
-var ProductList = [];
-
-
+/** 
+ * @descritpion Main js file product list
+ * @author Ajay Pratap Singh <ajasingh4@spaient.com>
+ */
 
 class Product {
 
-    constructor(result) {
-        this.result = result;
+    /**
+     * @description constructor function
+     * @param {*} ProductList  []
+     */
+
+    constructor(ProductList = []) {
+        this.ProductList = ProductList;
+        this.productUrl = 'http://127.0.0.1:5500/shopping/db.json';
     }
 
-    getData() {
-        async function loadJson(url) {
-            return await fetch(url)
-                .then(response => {
-                    if (response.status == 200) {
-                        return response.json();
-                    } else {
-                        throw new HttpError(response);
-                    }
-                })
-        }
+    /**
+     * @description fetch product list from server
+     * @param {*} url  string
+     */
+
+    async loadJson(url) {
+        return await fetch(url)
+            .then(response => {
+                if (response.status == 200) {
+                    return response.json();
+                } else {
+                    throw new HttpError(response);
+                }
+            })
     }
 
 
-    demoGithubUser() {
+    /**
+     * @description init function
+     */
 
-        return loadJson(`http://127.0.0.1:5500/shopping/db.json`)
+    getProductList() {
+        return this.loadJson(this.productUrl)
             .then(result => {
-                this.result = result;
-                document.getElementById('total_itms').innerHTML = ProductList.list.length;
-                document.getElementById('total_itms').innerHTML += ProductList.list.length > 1 ? ' items' : ' item';
+                this.ProductList = result;
+                document.getElementById('total_itms').innerHTML = this.ProductList.list.length;
+                document.getElementById('total_itms').innerHTML += this.ProductList.list.length > 1 ? ' items' : ' item';
 
-                result.list.forEach(function (r) {
+                console.log(this.productUrl);
+
+
+                this.ProductList.list.forEach(function (r) {
                     displayRecord(r);
                 });
             })
@@ -44,54 +58,23 @@ class Product {
                 }
             });
     }
-}
 
-let product = new Product();
-// product.demoGithubUser();
+    openModal(id) {
+        var item = this.ProductList.list.find(item => item.id === id);
+        document.getElementById('modal__title').innerHTML = item.title;
+        document.getElementById('modal__price').innerHTML = item.price;
+        document.getElementById('modal__image').innerHTML = `<img src='${item.img}' alt="${item.title} image" />`;
 
-
-
-
-
-
-class HttpError extends Error {
-    constructor(response) {
-        super(`${response.status} for ${response.url}`);
-        this.response = response;
+        modal.style.display = "block";
     }
 }
 
-async function loadJson(url) {
-    return await fetch(url)
-        .then(response => {
-            if (response.status == 200) {
-                return response.json();
-            } else {
-                throw new HttpError(response);
-            }
-        })
-}
+let product = new Product();
 
-function demoGithubUser() {
+product.getProductList();
 
-    return loadJson(`http://127.0.0.1:5500/shopping/db.json`)
-        .then(result => {
-            ProductList = result;
-            document.getElementById('total_itms').innerHTML = ProductList.list.length;
-            document.getElementById('total_itms').innerHTML += ProductList.list.length > 1 ? ' items' : ' item';
 
-            result.list.forEach(function (r) {
-                displayRecord(r);
-            });
-        })
-        .catch(err => {
-            if (err instanceof HttpError && err.response.status == 404) {
-                console.log("No record found.");
-            } else {
-                throw err;
-            }
-        });
-}
+
 
 function displayRecord(result) {
     var e1 = `
@@ -127,7 +110,7 @@ function displayRecord(result) {
                     </div>
                 </div>
                 <div class="col-6 col-sm-12 action-section">
-                    <div onclick="openModal(${result.id});" tabindex="0" role="button" aria-pressed="false">Edit</div>
+                    <div onclick="product.openModal(${result.id});" tabindex="0" role="button" aria-pressed="false">Edit</div>
                     <div  tabindex="0" role="button" aria-pressed="false">
                         <span aria-hidden=true>&times;</span> Remove
                     </div>
@@ -137,7 +120,18 @@ function displayRecord(result) {
     document.getElementById('product-list').innerHTML += e1;
 }
 
-demoGithubUser();
+/**
+ * @description HttpError Hadler class
+ */
+
+
+class HttpError extends Error {
+    constructor(response) {
+        super(`${response.status} for ${response.url}`);
+        this.response = response;
+    }
+}
+
 
 
 
@@ -163,12 +157,4 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
-function openModal(id) {
-    var item = ProductList.list.find(item => item.id === id);
-    document.getElementById('modal__title').innerHTML = item.title;
-    document.getElementById('modal__price').innerHTML = item.price;
-    document.getElementById('modal__image').innerHTML = `<img src='${item.img}' alt="${item.title} image" />`;
-
-    modal.style.display = "block";
 }
