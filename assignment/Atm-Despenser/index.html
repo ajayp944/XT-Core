@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATM Money Dispenser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ATM Money Dispenser</h1>
+        </header>
+        <main class="section-steps">
+            <section class="amount-section" role="region">
+                <form action="post" name="AtmForm" onsubmit="return submitAmount()" novalidate>
+                    <h2>welcome to atm</h2>
+                    <div class="form-group">
+                        <label for="amount">Enter the Amount</label>
+                        <input type="text" id="amount" name="amount" minlength="3" maxlength="5" placeholder="Max 40000 amount can DISPENSER" />
+                    </div>
+                    <button type="submit">Get Money</button>
+                </form>
+            </section>
+            <section class="dispenser-section">
+                <h3>You will get following amount</h3>
+                <div class="row">
+                    <div class="col">
+                        <span id="one-rs-note">0 </span> notes of Rs 1
+                    </div>
+                    <div class="col">
+                        <span id="two-rs-note">0 </span> notes of Rs 2
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span id="five-rs-note">0 </span> notes of Rs 5
+                    </div>
+                    <div class="col">
+                        <span id="ten-rs-note">0 </span> notes of Rs 10
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span id="twenty-rs-note">0 </span> notes of Rs 20
+                    </div>
+                    <div class="col">
+                        <span id="fifty-rs-note">0 </span> notes of Rs 50
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span id="hundred-rs-note">0 </span> notes of Rs 100
+                    </div>
+                    <div class="col">
+                        <span id="two-hundred-rs-note">0 </span> notes of Rs 200
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span id='five-hundred'>0</span> notes of Rs 500
+                    </div>
+                    <div class="col">
+                        <span id='two-thousand'>0</span> notes of Rs 2000
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col">
+                        <strong>Total notes dispensed: <span id="totalDispensed">0</span></strong>
+                    </div>
+                </div>
+            </section>
+            <div class="clearfix"></div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
