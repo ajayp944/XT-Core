@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -31,6 +33,57 @@
                 <p> 3 Items</p>
             </div>
             <div id="product-list"></div>
+
+        </section>
+        <section class="col-12 payment__section">
+            <div class="col-4">
+                <ul>
+                    <li>Need help or question</li>
+                    <li>Call Customer Service at 1-800-555-5555</li>
+                    <li><u>Chat with one of our stylists</u></li>
+                    <li><u>See return & exchange policy</u></li>
+                </ul>
+            </div>
+            <div class="col-8  col-sm-12">
+                <ul>
+                    <li>
+                        <label for="promo__code">Enter Promo code or gift card</label>
+                        <span>
+                            <input type="text" name="promo_code" id="promo__code">
+                            <button type="button">APPLY</button>
+                        </span>
+                    </li>
+                    <li>
+                        <label for="subtotal">Subtotal</label>
+                        <span id="subtotal">$37.00</span>
+                    </li>
+                    <li>
+                        <label for="subtotal">Promo code <strong>JF10</strong> Applied </label>
+                        <span id="subtotal">-$7.00</span>
+                    </li>
+                    <li>
+                        <label for="estimated_shipping">Estimated Shipping*</label>
+                        <p>You qualify for free shopping because your order is over $50*.</p>
+                        <span id="estimated_shipping">FREE</span>
+                    </li>
+                    <li>
+                        <label for="final__price">Estimated Total</label>
+                        <p>Tax will be applied during checkout</p>
+                        <span id="final__price">$30.00</span>
+                    </li>
+                </ul>
+                <div class="chexkout__section">
+                    <div>
+                        <a href="javascript:void(0);">Continue Shopping</a>
+                        <button type="button">Checkout</button>
+                    </div>
+                    <div>
+                        <p>
+                            Secure checkout. Shopping is always safe & secure.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <div id="myModal" class="modal">
@@ -76,5 +129,31 @@
         </div>
     </div>
     <script src="assets/js/main-new.js"></script>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>

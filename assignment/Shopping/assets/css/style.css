@@ -124,6 +124,7 @@ button {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .title {
@@ -141,7 +142,8 @@ button {
 }
 
 .box:last-child {
-	border-bottom: none;
+	margin-bottom: 40px;
+	border-bottom: 5px solid #cccccc;
 }
 
 .col-1,
@@ -330,6 +332,61 @@ img {
 }
 
 
+.payment__section .col-4{
+	padding-right: 8%;
+}
+.payment__section .col-4 li{
+	padding: 20px 0;
+	font-size: 80%;
+}
+.payment__section .col-4 li:first-child{
+	font-weight: 600;
+	font-size: 80%;
+}
+.payment__section .col-8 li{
+	padding: 20px 0;
+}
+
+.payment__section .col-8 li label{
+	font-weight: 600;
+	font-size: 90%;
+	text-transform: uppercase;
+}
+.payment__section .col-8 li strong{
+	font-size: 110%;
+}
+
+.payment__section .col-8 li span{
+	float: right;
+}
+
+.payment__section .col-8 li:first-child{
+	padding-bottom: 50px;
+	border-bottom: 5px solid #ccc;
+}
+.payment__section .col-8 li:last-child{
+	padding-bottom: 50px;
+	border-bottom: 5px solid #ccc;
+}
+
+.payment__section .col-8 input {
+	height: 45px;
+	width: 60%;
+}
+
+
+
+.chexkout__section div {
+	width: 100%;
+	margin: 20px 0;
+	text-align: right;
+}
+.chexkout__section div a{
+	padding-right: 20px;
+	text-decoration: underline;
+}
+
+
 /* Small phones to small tablets: from 481px to 767px */
 
 @media only screen and (max-width: 480px) {
@@ -370,5 +427,33 @@ img {
 	}
 	.modal-content li select {
 		width: 48%;
+	}
+
+	.payment__section .col-4{
+		display: none;
+	}
+	.payment__section .col-8 li:first-child{
+		padding-bottom: 70px;
+		text-align: center;
+	}
+	.payment__section .col-8 li:first-child{
+		padding-bottom: 70px;
+		text-align: center;
+	}
+	.payment__section .col-8 li:first-child span{
+		margin-top: 10px;
+	}
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+
+@media only screen and (max-width: 770px) {
+	.payment__section .col-8 li:first-child{
+		padding-bottom: 70px;
+		text-align: center;
+	}
+	.payment__section .col-8 li:first-child span{
+		float: none;
+		margin-top: 20px;
 	}
 }

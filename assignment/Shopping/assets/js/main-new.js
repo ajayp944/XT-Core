@@ -31,6 +31,56 @@ class Product {
             })
     }
 
+    /**
+     * @description display product list
+     * @param {*} result 
+     */
+
+
+    displayRecord(result) {
+        var e1 = `
+        <div class="box">
+            <div class="col-3 col-sm-6">
+                <img src="${result.img[0]}" class="img" alt="Black tshirt">
+            </div>
+            <div class="col-6">
+                <h5>${result.title}</h5>
+                <p>Style #: ${result.style}</p>
+                <p role="contentinfo">Color: ${result.color}</p>
+            </div>
+            <div class="desktop-view">
+                <div class="col-1">
+                    <p>${result.size}</p>
+                </div>
+                <div class="col-1">
+                    <input type="text" name="qty" value="${result.qty}">
+                </div>
+                <div class="col-1">
+                    <p>$${result.price}</p>
+                </div>
+            </div>
+            <div class="mobile-view">
+                <div class="col-sm-12">
+                    <p>Size: ${result.size}</p>
+                </div>
+                <div class="col-sm-12">
+                    <p>QTY: <input type="text" name="qty" value="${result.qty}"></p>
+                </div>
+                <div class="col-sm-12">
+                    <p><strong>$${result.price}</strong></p>
+                </div>
+            </div>
+            <div class="col-6 col-sm-12 action-section">
+                <div onclick="product.openModal(${result.id});" tabindex="0" role="button" aria-pressed="false">Edit</div>
+                <div tabindex="0" role="button" aria-pressed="false">
+                    <span aria-hidden=true>&times;</span> Remove
+                </div>
+                <div tabindex="0" role="button" aria-pressed="false">Save For Later</div>
+            </div>
+        </div>`;
+        document.getElementById('product-list').innerHTML += e1;
+    }
+
 
     /**
      * @description init function
@@ -42,12 +92,9 @@ class Product {
                 this.ProductList = result;
                 document.getElementById('total_itms').innerHTML = this.ProductList.list.length;
                 document.getElementById('total_itms').innerHTML += this.ProductList.list.length > 1 ? ' items' : ' item';
-
-                console.log(this.productUrl);
-
-
+                let that = this;
                 this.ProductList.list.forEach(function (r) {
-                    displayRecord(r);
+                    that.displayRecord(r);
                 });
             })
             .catch(err => {
@@ -64,7 +111,6 @@ class Product {
         document.getElementById('modal__title').innerHTML = item.title;
         document.getElementById('modal__price').innerHTML = item.price;
         document.getElementById('modal__image').innerHTML = `<img src='${item.img}' alt="${item.title} image" />`;
-
         modal.style.display = "block";
     }
 }
@@ -76,49 +122,6 @@ product.getProductList();
 
 
 
-function displayRecord(result) {
-    var e1 = `
-    <div class="box">
-                <div class="col-3 col-sm-6">
-                    <img src="${result.img}" class="img" alt="Black tshirt">
-                </div>
-                <div class="col-6">
-                    <h5>${result.title}</h5>
-                    <p>Style #: ${result.style}</p>
-                    <p role="contentinfo" >Color: ${result.color}</p>
-                </div>
-                <div class="desktop-view">
-                    <div class="col-1">
-                        <p>${result.size}</p>
-                    </div>
-                    <div class="col-1">
-                        <input type="text" name="qty" value="${result.qty}">
-                    </div>
-                    <div class="col-1">
-                        <p>$${result.price}</p>
-                    </div>
-                </div>
-                <div class="mobile-view">
-                    <div class="col-sm-12">
-                        <p>Size: ${result.size}</p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p>QTY: <input type="text" name="qty" value="${result.qty}"></p>
-                    </div>
-                    <div class="col-sm-12">
-                        <p><strong>$${result.price}</strong></p>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-12 action-section">
-                    <div onclick="product.openModal(${result.id});" tabindex="0" role="button" aria-pressed="false">Edit</div>
-                    <div  tabindex="0" role="button" aria-pressed="false">
-                        <span aria-hidden=true>&times;</span> Remove
-                    </div>
-                    <div tabindex="0" role="button" aria-pressed="false">Save For Later</div>
-                </div>
-            </div>`;
-    document.getElementById('product-list').innerHTML += e1;
-}
 
 /**
  * @description HttpError Hadler class
