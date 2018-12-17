@@ -18,10 +18,6 @@ function submitAmount() {
     totalNotes = 0;
 
     let notes = [2000, 500, 200, 100, 50, 50, 20, 10, 5, 2, 1];
-
-    console.log(notes);
-
-
     var amount = document.AtmForm.amount.value;
     if (amount == null || amount == "") {
         alert("Please enter vaild amount");
