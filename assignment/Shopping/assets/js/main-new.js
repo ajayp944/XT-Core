@@ -12,7 +12,7 @@ class Product {
 
     constructor(ProductList = []) {
         this.ProductList = ProductList;
-        this.productUrl = 'http://127.0.0.1:5500/shopping/db.json';
+        this.productUrl = 'http://127.0.0.1:5500/assignment/Shopping/db.json';
     }
 
     /**
@@ -110,7 +110,7 @@ class Product {
         var item = this.ProductList.list.find(item => item.id === id);
         document.getElementById('modal__title').innerHTML = item.title;
         document.getElementById('modal__price').innerHTML = item.price;
-        document.getElementById('modal__image').innerHTML = `<img src='${item.img}' alt="${item.title} image" />`;
+        document.getElementById('modal__image').innerHTML = `<img src='${item.img[0]}' alt="${item.title} image" />`;
         modal.style.display = "block";
     }
 }
