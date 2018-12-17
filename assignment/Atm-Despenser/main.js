@@ -16,71 +16,25 @@ var totalNotes = 0;
 
 function submitAmount() {
     totalNotes = 0;
+
+    let notes = [2000, 500, 200, 100, 50, 50, 20, 10, 5, 2, 1];
+
+    console.log(notes);
+
+
     var amount = document.AtmForm.amount.value;
     if (amount == null || amount == "") {
         alert("Please enter vaild amount");
         return false;
     }
 
-    if (amount > 2000) {
-        var response = calculateMoneyDispenser(amount, 2000);
+    notes.forEach(item => {
+        let response = calculateMoneyDispenser(amount, item);
         amount = response.amount;
-        document.getElementById("two-thousand").innerHTML = response.rupees;
-    }
-    if (amount > 500) {
-        var response = calculateMoneyDispenser(amount, 500);
-        amount = response.amount;
-        document.getElementById("five-hundred").innerHTML = response.rupees;
-    }
-
-    if (amount > 200) {
-        var response = calculateMoneyDispenser(amount, 200);
-        amount = response.amount;
-        document.getElementById("two-hundred-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount > 100) {
-        var response = calculateMoneyDispenser(amount, 100);
-        amount = response.amount;
-        document.getElementById("hundred-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount > 50) {
-        var response = calculateMoneyDispenser(amount, 50);
-        amount = response.amount;
-        document.getElementById("fifty-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount > 20) {
-        var response = calculateMoneyDispenser(amount, 20);
-        amount = response.amount;
-        document.getElementById("twenty-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount > 10) {
-        var response = calculateMoneyDispenser(amount, 10);
-        amount = response.amount;
-        document.getElementById("ten-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount > 5) {
-        var response = calculateMoneyDispenser(amount, 5);
-        amount = response.amount;
-        document.getElementById("five-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount > 2) {
-        var response = calculateMoneyDispenser(amount, 2);
-        amount = response.amount;
-        document.getElementById("two-rs-note").innerHTML = response.rupees;
-    }
-
-    if (amount == 1) {
-        var response = calculateMoneyDispenser(amount, 1);
-        amount = response.amount;
-        document.getElementById("one-rs-note").innerHTML = response.rupees;
-    }
-    document.getElementById("totalDispensed").innerHTML = response.totalNotes;
+        totalNotes = totalNotes + response.rupees;
+        document.getElementById("note-" + item).innerHTML = response.rupees;
+    });
+    document.getElementById("totalDispensed").innerHTML = totalNotes;
     return false;
 }
 
@@ -91,9 +45,8 @@ function submitAmount() {
 
 function calculateMoneyDispenser(amount, rupees) {
     var rs = Math.floor(amount / rupees);
-    totalNotes = totalNotes + rs;
     amount = amount % rupees;
-    return { "amount": amount, "rupees": rs, "totalNotes": totalNotes };
+    return { "amount": amount, "rupees": rs };
 }
 
 
@@ -109,7 +62,7 @@ setInputFilter(document.getElementById("amount"), function (value) {
 function setInputFilter(textbox, inputFilter) {
     ["input", "keypress"].forEach(function (event) {
         textbox.addEventListener(event, function () {
-            if (x(this.value)) {
+            if ((this.value)) {
                 this.oldValue = this.value;
                 this.oldSelectionStart = this.selectionStart;
                 this.oldSelectionEnd = this.selectionEnd;
