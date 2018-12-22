@@ -1,0 +1,17 @@
+{
+  "name": "uc2",
+  "version": "1.0.0",
+  "description": "# UC2->Express Example",
+  "main": "controller.js",
+  "scripts": {
+    "start": "node controller.js"
+  },
+  "author": "Ankur Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3"
+  }
+}

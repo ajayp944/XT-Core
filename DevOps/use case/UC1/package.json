@@ -1,0 +1,14 @@
+{
+  "name": "uc1",
+  "version": "1.0.0",
+  "description": "Customer list with their orders",
+  "main": "CustomerController.js",
+  "scripts": {
+    "start": "node CustomerController.js"
+  },
+  "author": "Ankur Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "require": "^2.4.20"
+  }
+}
